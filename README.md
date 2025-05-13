@@ -11,11 +11,9 @@
 </p>  
 
 
-**demo-video** 
 
-<div align="center">
-  <video src="https://github.com/liuhuadai/OmniAudio/raw/master/assets/demo.mp4" width="800" controls></video>
-</div>
+[![demo-video](https://img.shields.io/badge/Demo-Video-blue?style=for-the-badge)](https://raw.githubusercontent.com/liuhuadai/OmniAudio/master/assets/demo.mp4)
+
 
 
 ---
