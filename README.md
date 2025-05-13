@@ -13,9 +13,7 @@
 
 **demo-video** 
 
-<video src="demo.mp4" controls width="640">
-    您的浏览器不支持 video 标签。
-</video>
+<div align="center"><video src="assets/demo.mp4" width="800"></div>
 
 ---
 ## 🗞️ News
