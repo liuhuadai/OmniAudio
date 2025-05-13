@@ -31,7 +31,7 @@
 
 PyTorch Implementation of **OmniAudio**, a model for generating spatial audio from 360-degree videos.  
 
-Due to anonymization requirements, **our model will be available on Hugging Face soon！** 
+**Our model will be available on Hugging Face soon！** 
 
 ---
 
