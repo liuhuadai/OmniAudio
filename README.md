@@ -12,7 +12,7 @@
 
 
 
-[![demo-video](https://img.shields.io/badge/Demo-Video-blue?style=for-the-badge)](https://raw.githubusercontent.com/liuhuadai/OmniAudio/master/assets/demo.mp4)
+[![demovideo](https://img.shields.io/badge/Demo-Video-blue?style=for-the-badge)](https://media.githubusercontent.com/media/liuhuadai/OmniAudio/master/assets/demo.mp4)
 
 
 
