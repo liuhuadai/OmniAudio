@@ -1,0 +1,120 @@
+{
+    "model_type": "diffusion_cond",
+    "sample_size": 441000,
+    "sample_rate": 44100,
+    "audio_channels": 4,
+    "model": {
+        "pretransform": {
+            "type": "autoencoder",
+            "iterate_batch": true,
+            "config": {
+                "encoder": {
+                    "type": "oobleck",
+                    "config": {
+                        "in_channels": 4,
+                        "channels": 128,
+                        "c_mults": [1, 2, 4, 8, 16],
+                        "strides": [2, 4, 4, 8, 8],
+                        "latent_dim": 128,
+                        "use_snake": true
+                    }
+                },
+                "decoder": {
+                    "type": "oobleck",
+                    "config": {
+                        "out_channels": 4,
+                        "channels": 128,
+                        "c_mults": [1, 2, 4, 8, 16],
+                        "strides": [2, 4, 4, 8, 8],
+                        "latent_dim": 64,
+                        "use_snake": true,
+                        "final_tanh": false
+                    }
+                },
+                "bottleneck": {
+                    "type": "vae"
+                },
+                "latent_dim": 64,
+                "downsampling_ratio": 2048,
+                "io_channels": 4
+            }
+        },
+        "conditioning": {
+            "configs": [
+                {
+                    "id": "video_fov",
+                    "type": "video_linear",
+                    "config": {
+                        "dim": 1024,
+                        "output_dim": 1536
+                    }
+                },
+                {
+                    "id": "video_360",
+                    "type": "video_global",
+                    "config": {
+                        "dim": 1024,
+                        "output_dim": 1536
+                    }
+                }
+            ],
+            "cond_dim": 768
+        },
+        "diffusion": {
+            "global_cond_ids": ["video_360"],
+            "add_cond_ids": ["video_fov"],
+            "type": "dit",
+            "diffusion_objective": "rectified_flow",
+            "config": {
+                "io_channels": 64,
+                "embed_dim": 1536,
+                "depth": 24,
+                "num_heads": 24,
+                "cond_token_dim": 768,
+                "global_cond_dim": 1536,
+                "project_cond_tokens": false,
+                "transformer_type": "continuous_transformer"
+            }
+        },
+        "io_channels": 64
+    },
+    "training": {
+        "use_ema": true,
+        "log_loss_info": false,
+        "cfg_dropout_prob": 0.2,
+        "optimizer_configs": {
+            "diffusion": {
+                "optimizer": {
+                    "type": "AdamW",
+                    "config": {
+                        "lr": 5e-5,
+                        "betas": [0.9, 0.999],
+                        "weight_decay": 1e-3
+                    }
+                },
+                "scheduler": { 
+                    "type": "InverseLR",
+                    "config": {
+                        "inv_gamma": 1000000,
+                        "power": 0.5,
+                        "warmup": 0.99
+                    }
+                }
+            }
+        },
+        "demo": {
+            "demo_every": 2000,
+            "demo_steps": 64,
+            "num_demos": 6, 
+            "demo_cond": [
+                {"video_360": "dataset/foa/demos/metaclip-huge-eq/dS7Ffvs2Evgl_4.npy", "video_fov": "dataset/foa/demos/metaclip-huge-front/dS7Ffvs2Evgl_4.npy"},
+                {"video_360": "dataset/foa/demos/metaclip-huge-eq/G8pABGosD38l_17.npy", "video_fov": "dataset/foa/demos/metaclip-huge-front/G8pABGosD38l_17.npy"},
+                {"video_360": "dataset/foa/demos/metaclip-huge-eq/NdE7uYVaynQl_0.npy", "video_fov": "dataset/foa/demos/metaclip-huge-front/NdE7uYVaynQl_0.npy"},
+                {"video_360": "dataset/foa/demos/metaclip-huge-eq/dS7Ffvs2Evgl_4.npy", "video_fov": "dataset/foa/demos/metaclip-huge-front/dS7Ffvs2Evgl_4.npy"},
+                {"video_360": "dataset/foa/demos/metaclip-huge-eq/tAiVUt5vE34l_30.npy", "video_fov": "dataset/foa/demos/metaclip-huge-front/tAiVUt5vE34l_30.npy"},
+                {"video_360": "dataset/foa/demos/metaclip-huge-eq/0B7ds6NmVBQl_80.npy", "video_fov": "dataset/foa/demos/metaclip-huge-front/0B7ds6NmVBQl_80.npy"}
+            ],
+            "demo_cfg_scales": [3,6,9]
+        }
+    }
+}

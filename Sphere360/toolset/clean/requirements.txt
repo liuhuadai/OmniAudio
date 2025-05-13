@@ -1,0 +1,8 @@
+funasr==1.1.16
+imagebind==0.1.0
+numpy==2.2.4
+opencv_python==4.10.0.84
+pandas==2.2.3
+pydub==0.25.1
+torch==1.13.1
+tqdm==4.67.1

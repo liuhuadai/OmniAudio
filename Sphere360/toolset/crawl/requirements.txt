@@ -1,0 +1,5 @@
+google_api_python_client==2.155.0
+httplib2==0.22.0
+pandas==2.2.3
+Requests==2.32.3
+tqdm==4.67.1
