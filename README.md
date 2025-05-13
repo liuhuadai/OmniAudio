@@ -1,4 +1,4 @@
-# 🎧 OmniAudio: Generating Spatial Audio from 360-Degree Video
+# 🎧 [ICML 2025]OmniAudio: Generating Spatial Audio from 360-Degree Video
 
 
 
@@ -32,7 +32,7 @@
 
 PyTorch Implementation of **OmniAudio**, a model for generating spatial audio from 360-degree videos.  
 
-**Our model will be available on HuggingFace soon！** 
+**Our model weights and Sphere360 dataset will be available on HuggingFace soon！** 
 
 ---
 
