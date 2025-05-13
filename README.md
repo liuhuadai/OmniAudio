@@ -13,7 +13,7 @@
 
 **demo-video** 
 
-<div align="center"><video src="https://github.com/liuhuadai/OmniAudio/blob/master/assets/demo.mp4" width="800"></div>
+<div align="center"><video src="https://github.com/liuhuadai/OmniAudio/assets/demo.mp4" width="800"></div>
 
 ---
 ## 🗞️ News
