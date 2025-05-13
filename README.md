@@ -159,7 +159,7 @@ If OmniAudio contributes to your research or applications, we kindly ask you to 
                   archivePrefix={arXiv},
                   primaryClass={eess.AS},
                   url={https://arxiv.org/abs/2504.14906}, 
-            }
+}
 ```
 ---
 
