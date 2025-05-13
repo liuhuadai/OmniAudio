@@ -21,6 +21,7 @@
 
 * **\[2025.02]** 🔥 [Online Demo](https://OmniAudio-360v2sa.github.io/) is live — try it now!
 * **\[2025.04]** 🔥 [OmniAudio paper](https://arxiv.org/pdf/2504.14906) is released on arXiv.
+* **\[2025.05]** 🎉 OmniAudio has been accepted to **ICML 2025**!
 * **\[2025.05]** 🔥 Released inference code and OmniAudio dataset.
 
 ---
@@ -144,6 +145,22 @@ The dataset was constructed via a two-stage crawling and filtering pipeline:
 * All channel metadata is recorded in `dataset/channels.csv`.
 
 
+---
+
+## 📑 Citation
+
+If OmniAudio contributes to your research or applications, we kindly ask you to cite it using the following BibTeX entry:
+```bibtex
+@misc{liu2025omniaudiogeneratingspatialaudio,
+                  title={OmniAudio: Generating Spatial Audio from 360-Degree Video}, 
+                  author={Huadai Liu and Tianyi Luo and Qikai Jiang and Kaicheng Luo and Peiwen Sun and Jialei Wan and Rongjie Huang and Qian Chen and Wen Wang and Xiangtai Li and Shiliang Zhang and Zhijie Yan and Zhou Zhao and Wei Xue},
+                  year={2025},
+                  eprint={2504.14906},
+                  archivePrefix={arXiv},
+                  primaryClass={eess.AS},
+                  url={https://arxiv.org/abs/2504.14906}, 
+            }
+```
 ---
 
 💡 *Have fun experimenting with OmniAudio! 🛠️💖*
