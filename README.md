@@ -14,7 +14,7 @@
 **demo-video** 
 
 <div align="center">
-  <video src="https://raw.githubusercontent.com/liuhuadai/OmniAudio/master/assets/demo.mp4" controls width="800"></video>
+  <video src="https://github.com/liuhuadai/OmniAudio/raw/master/assets/demo.mp4" width="800" controls></video>
 </div>
 
 
