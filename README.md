@@ -159,13 +159,13 @@ The dataset was constructed via a two-stage crawling and filtering pipeline:
 If OmniAudio contributes to your research or applications, we kindly ask you to cite it using the following BibTeX entry:
 ```bibtex
 @misc{liu2025omniaudiogeneratingspatialaudio,
-                  title={OmniAudio: Generating Spatial Audio from 360-Degree Video}, 
-                  author={Huadai Liu and Tianyi Luo and Qikai Jiang and Kaicheng Luo and Peiwen Sun and Jialei Wan and Rongjie Huang and Qian Chen and Wen Wang and Xiangtai Li and Shiliang Zhang and Zhijie Yan and Zhou Zhao and Wei Xue},
-                  year={2025},
-                  eprint={2504.14906},
-                  archivePrefix={arXiv},
-                  primaryClass={eess.AS},
-                  url={https://arxiv.org/abs/2504.14906}, 
+      title={OmniAudio: Generating Spatial Audio from 360-Degree Video}, 
+      author={Huadai Liu and Tianyi Luo and Qikai Jiang and Kaicheng Luo and Peiwen Sun and Jialei Wan and Rongjie Huang and Qian Chen and Wen Wang and Xiangtai Li and Shiliang Zhang and Zhijie Yan and Zhou Zhao and Wei Xue},
+      year={2025},
+      eprint={2504.14906},
+      archivePrefix={arXiv},
+      primaryClass={eess.AS},
+      url={https://arxiv.org/abs/2504.14906}, 
 }
 ```
 ---
