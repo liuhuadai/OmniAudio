@@ -12,7 +12,8 @@
 
 
 
-[![demovideo](https://img.shields.io/badge/Demo-Video-blue?style=for-the-badge)](https://github.com/liuhuadai/OmniAudio/raw/master/assets/demo.mp4)
+[![Demo Video](https://img.shields.io/badge/Demo-Video-blue?style=for-the-badge)](https://streamable.com/pqwvji)
+
 
 
 ---
