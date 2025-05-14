@@ -1,7 +1,6 @@
 #!/bin/bash
-video_path=$1
-checkpoint_dir=$2 # checkpoint dir
-cuda=$3 # cuda id
+video_path=${1:-cases/sample1_.webm}
+cuda=${2:-0}
 
 model_config="configs/v2a_foa.json"
 
@@ -19,7 +18,6 @@ CUDA_VISIBLE_DEVICES=$cuda \
     --base-dir $video_path \
     --infer-type v2a \
     --model-config $model_config \
-    --ckpt-path $checkpoint_dir \
     --dirname $output_dir \
     --mode eqfov \
 

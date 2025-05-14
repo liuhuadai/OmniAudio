@@ -23,6 +23,8 @@
 * **\[2025.04]** 🔥 [OmniAudio paper](https://arxiv.org/pdf/2504.14906) is released on arXiv.
 * **\[2025.05]** 🎉 OmniAudio has been accepted to **ICML 2025**!
 * **\[2025.05]** 🔥 Released inference code and OmniAudio dataset.
+* **\[2025.05]** 📦 Released pretrained model weights and dataset on Hugging Face.
+
 
 ---
 
@@ -32,7 +34,8 @@
 
 PyTorch Implementation of **OmniAudio**, a model for generating spatial audio from 360-degree videos.  
 
-**Our model weights and Sphere360 dataset will be available on HuggingFace soon！** 
+**Our [checkpoints](https://huggingface.co/OmniAudio/OmniAudio360V2SA) and [Sphere360 dataset](https://huggingface.co/datasets/OmniAudio/Sphere360) are now available on Hugging Face!**
+
 
 ---
 
@@ -65,9 +68,13 @@ pip install git+https://github.com/patrick-kidger/torchcubicspline.git
  
 3️⃣ **Run inference with the provided script:**  
    ```bash
-   bash demo.sh video_path checkpoint_dir cuda_id
+   bash demo.sh video_path cuda_id
    ```  
 💡 *You can also modify `demo.sh` to change the output directory.* The `cases` folder contains some sample 360-degree videos in the equirectangular format—make sure your videos follow the same format! 🎥✨  
+
+By default, the script will automatically **download the pretrained model checkpoint** from our [HuggingFace repository](https://huggingface.co/OmniAudio/OmniAudio360V2SA) if no custom checkpoint is specified.
+
+If you wish to use your **own trained model**, you can modify `demo.sh` to explicitly pass `--ckpt-path` and point to your checkpoint directory. 
 
 ---
 

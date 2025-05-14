@@ -26,7 +26,7 @@ import shutil
 from omniaudio import get_pretrained_model
 
 from extract_video_features import extract_video_features
-
+from huggingface_hub import hf_hub_download
 
 
 model = None
@@ -44,14 +44,21 @@ def load_model(model_config=None, model_ckpt_path=None, pretrained_name=None, pr
         print(f"Loading pretrained model {pretrained_name}")
         model, model_config = get_pretrained_model(pretrained_name)
 
-    elif model_config is not None and model_ckpt_path is not None:
+    elif model_config is not None:
         print(f"Creating model from config")
         model = create_model_from_config(model_config)
 
+        # 🟡 If model_ckpt_path is None, download from HuggingFace
+        if model_ckpt_path is None:
+            print(f"No checkpoint provided. Downloading from HuggingFace repo omniaudio/OmniAudio360V2SA...")
+            model_ckpt_path = hf_hub_download(
+                repo_id="omniaudio/OmniAudio360V2SA",
+                filename="model.ckpt"
+            )
+
         print(f"Loading model checkpoint from {model_ckpt_path}")
-        # Load checkpoint
-        copy_state_dict(model, load_ckpt_state_dict(model_ckpt_path, prefix=prefix))  # ,prefix='autoencoder.'
-        # model.load_state_dict(load_ckpt_state_dict(model_ckpt_path))
+        copy_state_dict(model, load_ckpt_state_dict(model_ckpt_path, prefix=prefix))
+
 
     sample_rate = model_config["sample_rate"]
     sample_size = model_config["sample_size"]
@@ -227,7 +234,7 @@ if __name__ == "__main__":
     parser.add_argument('--infer-type', type=str, help='Inference Type', default='v2a',
                         required=False)
     parser.add_argument('--model-config', type=str, help='Path to model config', required=False)
-    parser.add_argument('--ckpt-path', type=str, help='Path to model checkpoint', required=False)
+    parser.add_argument('--ckpt-path', type=str, help='Path to model checkpoint', default=None)
     parser.add_argument('--dirname', type=str, help='output directory', required=True)
     parser.add_argument('--pretransform-ckpt-path', type=str, help='Optional to model pretransform checkpoint',
                         required=False)
