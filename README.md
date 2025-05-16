@@ -21,7 +21,7 @@
 
 * **\[2025.02]** 🔥 [Online Demo](https://OmniAudio-360v2sa.github.io/) is live — try it now!
 * **\[2025.04]** 🔥 [OmniAudio paper](https://arxiv.org/pdf/2504.14906) is released on arXiv.
-* **\[2025.05]** 🎉 OmniAudio has been accepted to **ICML 2025**!
+* **\[2025.05]** 🎉 OmniAudio has been accepted by **ICML 2025**!
 * **\[2025.05]** 🔥 Released inference code and OmniAudio dataset.
 * **\[2025.05]** 📦 Released pretrained model weights and dataset on Hugging Face.
 
@@ -112,7 +112,7 @@ Inside the directory, you’ll find:
 
 ### 🔀 Dataset Split
 
-The dataset is split as follows (see `dataset/split/`):
+The dataset is splited as follows (see `dataset/split/`):
 
 * **Training set**: \~100.5k samples
 * **Test set**: \~3k samples
