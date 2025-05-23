@@ -21,7 +21,7 @@
 
 * **\[2025.02]** 🔥 [Online Demo](https://OmniAudio-360v2sa.github.io/) is live — try it now!
 * **\[2025.04]** 🔥 [OmniAudio paper](https://arxiv.org/pdf/2504.14906) is released on arXiv.
-* **\[2025.05]** 🎉 OmniAudio has been accepted by **ICML 2025**!
+* **\[2025.05]** 🎉 OmniAudio has been accepted by **ICML 2025**, See you Vancouver!
 * **\[2025.05]** 🔥 Released inference code and OmniAudio dataset.
 * **\[2025.05]** 📦 Released pretrained model weights and dataset on Hugging Face.
 
@@ -122,7 +122,7 @@ The dataset is splited as follows (see `dataset/split/`):
 
 ### 🛠️ Data Collection & Cleaning
 
-The dataset was constructed via a two-stage crawling and filtering pipeline:
+The dataset is constructed via a two-stage crawling and filtering pipeline as follows:
 
 * **Crawling**
 
@@ -156,7 +156,7 @@ The dataset was constructed via a two-stage crawling and filtering pipeline:
 
 ## 📑 Citation
 
-If OmniAudio contributes to your research or applications, we kindly ask you to cite it using the following BibTeX entry:
+If OmniAudio contributes to your research or applications, please cite it using the following BibTeX entry:
 ```bibtex
 @misc{liu2025omniaudiogeneratingspatialaudio,
       title={OmniAudio: Generating Spatial Audio from 360-Degree Video}, 
@@ -170,6 +170,6 @@ If OmniAudio contributes to your research or applications, we kindly ask you to 
 ```
 ---
 
-💡 *Have fun experimenting with OmniAudio! 🛠️💖*
+💡 *Have fun experimenting with OmniAudio! If you have any comments or questions, feel free to contact liuhuadai@zju.edu.cn 🛠️💖*
 
 
